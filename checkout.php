@@ -41,7 +41,6 @@ if(isset($_POST['order'])){
    }else{
       $message[] = 'your cart is empty';
    }
-
 }
 
 ?>
@@ -113,10 +112,18 @@ if(isset($_POST['order'])){
          <div class="inputBox">
             <span>payment method :</span>
             <select name="method" class="box" required>
-               <option value="cash on delivery">Cash on Delivery</option>
-               <option value="credit card">Credit Card</option>
-               <option value="paytm">Gcash</option>
-               <option value="paypal">Paypal</option>
+               <option>-- Select Payment Method --</option>
+               <?php 
+                  $select_method=$conn->prepare("SELECT paymentName FROM `paymenttable`");
+                  $select_method->execute();
+                  if($select_method->rowCount() > 0){
+                     while($fetch_meth = $select_method->fetch(PDO::FETCH_ASSOC)){
+               ?>
+               <option><?=$fetch_meth['paymentName']?></option>
+               <?php
+                  }
+               }
+               ?>
             </select>
          </div>
          <div class="inputBox">

@@ -74,60 +74,38 @@ include 'components/wishlist_cart.php';
 
    <?php include 'components/user_header.php'; ?>
 
-   <div class="home-bg">
+   <div class="container-fluid" style="padding: 0;">
+      <div id="demo" class="carousel slide" data-bs-ride="carousel">
 
-      <section class="home">
-         <div class="left center">
-            <div id="carouselExampleIndicators" class="carousel slide sld" data-bs-ride="true">
-               <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-               </div>
-               <div class="carousel-inner">
-                  <div class="carousel-item active">
-                     <img src="images/agnes1.jpg" id="img1" class="d-block w-100 img-home" alt="...">
-                     <div class="carousel-caption">
-                        <p>New Arrival</p>
-                     </div>
-                  </div>
-                  <div class="carousel-item">
-                     <img src="images/agnes2.jpg" id="img2" class="d-block w-100 img-home" alt="...">
-                     <div class="carousel-caption">
-                        <p>On the week</p>
-                     </div>
-                  </div>
-                  <div class="carousel-item">
-                     <img src="images/agnes3.jpg" id="img3" class="d-block w-100 img-home" alt="...">
-                     <div class="carousel-caption">
-                        <p id="kor">#KoreanInspiredTops</p>
-                     </div>
-                  </div>
-               </div>
-               <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-               </button>
-               <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-               </button>
-            </div>
+         <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
          </div>
-         <div class="right center">
-            <div class="home-box">
-               <h1>New Arrival</h1>
-               <h3>on the week</h3>
-               <h5>#KoreanInspiredTops</h5>
+
+         <div class="carousel-inner">
+            <div class="carousel-item active">
+               <img src="images/1425435.png" alt="Los Angeles" class="d-block" style="width:100%">
+            </div>
+            <div class="carousel-item">
+               <img src="images/51368.jpg" alt="Chicago" class="d-block" style="width:100%">
+            </div>
+            <div class="carousel-item">
+               <img src="images/51414.jpg" alt="New York" class="d-block" style="width:100%">
             </div>
          </div>
 
-      </section>
-
+         <!-- Left and right controls/icons -->
+         <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+         </button>
+         <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+         </button>
+      </div>
    </div>
-
    <div class="heading-head">
-      <h1 class="heading">latest products</h1>
+      <h1 class="heading">products</h1>
    </div>
 
    <section class="home-products">
@@ -147,15 +125,16 @@ include 'components/wishlist_cart.php';
                      <input type="hidden" name="name" value="<?= $fetch_product['name']; ?>">
                      <input type="hidden" name="price" value="<?= $fetch_product['price']; ?>">
                      <input type="hidden" name="image" value="<?= $fetch_product['image_01']; ?>">
-                     <button class="fas fa-heart" type="submit" name="add_to_wishlist"></button>
-                     <a href="quick_view.php?pid=<?= $fetch_product['id']; ?>" class="fas fa-eye"></a>
+                     <!--<button class="fas fa-heart" type="submit" name="add_to_wishlist"></button>
+                     <a href="quick_view.php?pid=<?= $fetch_product['id']; ?>" class="fas fa-eye"></a>-->
                      <img src="uploaded_img/<?= $fetch_product['image_01']; ?>" alt="">
                      <div class="name"><?= $fetch_product['name']; ?></div>
                      <div class="flex">
                         <div class="price"><span>₱</span><?= $fetch_product['price']; ?><span>.00</span></div>
-                        <input type="number" name="qty" class="qty" min="1" max="99" onkeypress="if(this.value.length == 2) return false;" value="1">
+                        <!--<input type="number" name="qty" class="qty" min="1" max="99" onkeypress="if(this.value.length == 2) return false;" value="1">-->
                      </div>
-                     <input type="submit" value="add to cart" class="option-btn" name="add_to_cart">
+                     <!--<input type="submit" value="add to cart" class="option-btn" name="add_to_cart">-->
+                     <a href="quick_view.php?pid=<?= $fetch_product['id']; ?>" class="option-btn">View Item</a>
                   </form>
             <?php
                }

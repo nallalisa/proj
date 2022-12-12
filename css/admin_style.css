@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap');
 
 :root{
-   --main-color:#373434;
+   --main-color:#2770E1;
    --orange:#946F4D;
-   --secondary: #E49E64;
+   --secondary: #24B3FF;
    --red:#e74c3c;
    --black:#333;
-   --white:beige;
+   --white:#fff;
    --light-color:#666;
    --light-bg:#eee;
    --border1: 1px solid beige;
@@ -88,14 +88,18 @@ section{
 }
 
 .btn{
-   background-color: var(--orange);
+   background-color: var(--main-color);
 }
 
 .option-btn{
-   background-color: var(--orange);
+   background-color: var(--main-color);
 }
 
 .delete-btn{
+   background-color: red;
+}
+
+.delete-btn:hover{
    background-color: var(--red);
 }
 
@@ -162,7 +166,7 @@ section{
    padding:2rem;
    text-align: center;
    box-shadow: var(--box-shadow);
-   background-color: var(--main-color);
+   background-color: var(--white);
    border-radius: .5rem;
    width: 50rem;
    border:var(--border);
@@ -170,14 +174,14 @@ section{
 
 .form-container form h3{
    text-transform: uppercase;
-   color:var(--white);
+   color:var(--main-color);
    margin-bottom: 1rem;
    font-size: 2.5rem;
 }
 
 .form-container form p{
    font-size: 1.8rem;
-   color:var(--white);
+   color:var(--black);
    margin-bottom: 1rem;
    border-radius: .5rem;
 }

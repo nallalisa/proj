@@ -4,14 +4,10 @@
 
       <div class="box">
          <h3>contact us</h3>
-         <a href=""><i class="fas fa-phone"></i> +639665868848</a>
-         <a href=""><i class="fas fa-envelope"></i> reymalyn.sc@gmail.com</a>
-         <a href=""><i class="fas fa-map-marker-alt"></i> Caloocan City, Philippines</a>
-      </div>
-
-      <div class="box">
-         <h3>follow us</h3>
-         <a href="https://www.facebook.com/mariaswardrobeph"><i class="fab fa-facebook-f"></i>facebook</a>
+         <a href=""><i class="fas fa-phone"></i> +63 917-307-3695</a>
+         <a href=""><i class="fas fa-phone"></i> +63 907-446-3625</a>
+         <!--<a href=""><i class="fas fa-envelope"></i> reymalyn.sc@gmail.com</a>-->
+         <a href=""><i class="fas fa-map-marker-alt"></i> Quezon City, Philippines</a>
       </div>
 
    </section>

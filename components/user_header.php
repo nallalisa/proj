@@ -17,7 +17,7 @@
 
       <nav class="navbar">
          <a href="home.php">home</a>
-         <a href="about.php">about</a>
+         <!--<a href="about.php">about</a>-->
          <a href="orders.php">orders</a>
          <a href="shop.php">shop</a>
          <a href="contact.php">contact</a>
@@ -53,10 +53,10 @@
             $fetch_profile = $select_profile->fetch(PDO::FETCH_ASSOC);
          ?>
          <p><?= $fetch_profile["name"]; ?></p>
-         <a href="update_user.php" class="btn btn-dark">update profile</a>
+         <a href="update_user.php" class="option-btn">update profile</a>
          <div class="flex-btn">
-            <a href="user_register.php" class="option-btn">register</a>
-            <a href="user_login.php" class="option-btn">login</a>
+            <!--<a href="user_register.php" class="option-btn">register</a>
+            <a href="user_login.php" class="option-btn">login</a>-->
          </div>
          <a href="components/user_logout.php" class="logout" onclick="return confirm('logout from the website?');">logout</a> 
          <?php
